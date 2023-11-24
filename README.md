@@ -4,12 +4,14 @@
 
 ```bash
 npm install
+npm rebuild node-sass
 # or
 yarn
+yarn rebuild node-sass
 ```
 ## run
 ```bash
-live-server
+live-server && npm run compile:sass or yarn comile:Sass
 ```
 ### resources
 

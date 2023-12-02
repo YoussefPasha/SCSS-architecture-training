@@ -1,5 +1,4 @@
 .card {
-
     perspective: 1500rem;
     -moz-perspective: 150rem;
     position: relative;
@@ -14,7 +13,7 @@
         overflow: hidden;
         border-radius: 3px;
 
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
         transition: all 0.8s ease;
         backface-visibility: hidden;
 
@@ -26,22 +25,17 @@
             transform: rotateY(180deg);
 
             &-1 {
-                background-image: linear-gradient(to right bottom, $color-secondary-light,
-                        $color-secondary-dark);
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
             }
 
             &-2 {
-                background-image: linear-gradient(to right bottom, $color-primary-light,
-                        $color-primary-dark);
+                background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
             }
 
             &-3 {
-                background-image: linear-gradient(to right bottom, $color-tertiary-light,
-                        $color-tertiary-dark);
+                background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
             }
-
         }
-
     }
 
     &:hover &__side--front {
@@ -62,18 +56,18 @@
         border-top-right-radius: 3px;
 
         &--1 {
-            background-image: linear-gradient(to right bottom, $color-secondary-light,
-                    $color-secondary-dark), url('../img/nat-5.jpg');
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+                url("../img/nat-5.jpg");
         }
 
         &--2 {
-            background-image: linear-gradient(to right bottom, $color-primary-light,
-                    $color-primary-dark), url('../img/nat-6.jpg');
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
+                url("../img/nat-6.jpg");
         }
 
         &--3 {
-            background-image: linear-gradient(to right bottom, $color-tertiary-light,
-                    $color-tertiary-dark), url('../img/nat-7.jpg');
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
+                url("../img/nat-7.jpg");
         }
     }
 
@@ -95,21 +89,27 @@
         -webkit-box-decoration-break: clone;
 
         &--1 {
-            background-image: linear-gradient(to right bottom,
-                    rgba($color-secondary-light, 0.85),
-                    rgba($color-secondary-dark, 0.85));
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-secondary-light, 0.85),
+                rgba($color-secondary-dark, 0.85)
+            );
         }
 
         &--2 {
-            background-image: linear-gradient(to right bottom,
-                    rgba($color-primary-light, 0.85),
-                    rgba($color-primary-dark, 0.85));
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-primary-light, 0.85),
+                rgba($color-primary-dark, 0.85)
+            );
         }
 
         &--3 {
-            background-image: linear-gradient(to right bottom,
-                    rgba($color-tertiary-light, 0.85),
-                    rgba($color-tertiary-dark, 0.85));
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-tertiary-light, 0.85),
+                rgba($color-tertiary-dark, 0.85)
+            );
         }
     }
 
@@ -127,7 +127,7 @@
                 padding: 1rem;
 
                 &:not(:last-child) {
-                    border-bottom: 1px solid $color-grey-light-2 ;
+                    border-bottom: 1px solid $color-grey-light-2;
                 }
             }
         }
@@ -135,9 +135,7 @@
 
     &__cta {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include centerHorizontal;
         width: 90%;
         text-align: center;
     }
@@ -157,5 +155,4 @@
         font-size: 6rem;
         font-weight: 100;
     }
-
 }
